@@ -1,0 +1,131 @@
+@use '../global' as *;
+
+
+
+.header {
+    padding: {
+        top: 3vh;
+        bottom: 3vh;
+    }
+
+    @media screen and (max-width: 980px) {
+        padding: {
+            top: 1vh;
+            bottom: 1vh;
+        }
+    }
+
+    &.header-accueil {
+        h1 {
+            position: relative;
+            z-index: 11;
+            font-size: rem(56);
+            background-color: color(primary, noir);
+            color: color(primary, blanc);
+            padding: rem(8) rem(32) rem(8) rem(32);
+            border-radius: rem(50);
+            font-weight: 500;
+            width: fit-content;
+
+            @media screen and (max-width: 1200px) {
+                font-size: rem(25);
+                padding: rem(8) rem(16) rem(8) rem(16);
+            }
+        }
+    }
+
+    &.header-realisations {
+        background-color: color(primary, orange);
+        padding-bottom: 11vh;
+
+    }
+
+    &.header-a-propos {
+        background-color: color(primary, violet);
+    }
+
+    &.header-realisation {
+        background-color: color(primary, bleu);
+
+    }
+
+    .contenu-header {
+        position: relative;
+        z-index: 11;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+
+
+        @media screen and (max-width: 1200px) {
+            flex-direction: row-reverse;
+            height: 8vh;
+            width: 90%;
+
+        }
+
+        .header-gauche {
+            display: flex;
+            align-items: center;
+            gap: rem(16);
+
+            .photo-moi {
+                height: rem(64);
+
+                @media screen and (max-width: 1200px) {
+                    display: none;
+                }
+            }
+
+            .titre-header {
+                color: color(primary, blanc);
+                font-size: rem(32);
+                background-color: color(primary, noir);
+                padding: rem(8) rem(24) rem(8) rem(24);
+                border-radius: rem(50);
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 5vw;
+                    padding: rem(8) rem(16) rem(8) rem(16);
+                }
+            }
+        }
+    }
+
+}
+
+.titre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(32);
+    padding-top: rem(88);
+
+    @media screen and (max-width: 980px) {
+        padding-top: rem(24);
+        gap: rem(16);
+    }
+
+    &.titre-realisations {
+        background-color: color(primary, orange);
+    }
+
+
+    h1 {
+        color: color(primary, blanc);
+        font-size: rem(56);
+
+
+        @media screen and (max-width: 980px) {
+            font-size: rem(48);
+        }
+    }
+
+    img {
+        @media screen and (max-width: 980px) {
+            height: rem(48);
+        }
+    }
+}

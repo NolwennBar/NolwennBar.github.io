@@ -1,0 +1,11 @@
+Todo:
+  ☐ séparer la nav et le header et mettre le tout dans une div
+  ☐ alt mais que pour les images utiles, éviter les relites avec le texte à coté
+  ☐ aria label sur les boutons
+  ☐ ria label sur les liens
+  ☐ liens d'évitement à faire
+  ☐ plan du site
+  ☐ avoir un contraste suffisant liens focus or :hover min(4.5)
+  ☐ aria pour les images dans rélaisation pour tablist pour image
+
+

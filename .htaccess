@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule realisations.php pages/realisations.php 

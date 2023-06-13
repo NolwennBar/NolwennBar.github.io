@@ -1,0 +1,47 @@
+// ---------------------------------------------------------
+// Colors
+// ---------------------------------------------------------
+@forward 'functions';
+
+$colors: (
+    primary: (jaune: #FCFF00,
+        vert:#00FF46,
+        orange:#E96200,
+        noir:#000000,
+        blanc:#FFFFFF,
+        rouge:#FF0000,
+        bleu:#0006F6,
+        violet:#9747ff,
+        rose:#FF00CC,
+        bleu-clair:#00FFF7,
+    ),
+    secondary: (),
+    btow: (1000: hsl(0, 0%, 3%),
+        900: rgb(39, 39, 39),
+        800: rgb(67, 67, 67),
+        700: rgb(102, 102, 103),
+        600: hsl(240, 9.1%, 45.3%),
+        500: hsl(240, 7.8%, 54.5%),
+        400: hsl(240, 7.5%, 63.5%),
+        300: hsl(240, 7.9%, 72.7%),
+        200: hsl(240, 7.5%, 81.8%),
+        100: hsl(240, 5.9%, 96.7%),
+        0: hsl(0, 0%, 100%, 1),
+    ),
+    other: (),
+    shadows:(1: 1px 1px color(primary, noir),
+        2: 2px 2px color(primary, noir),
+        3: 3px 3px color(primary, noir),
+        4: 4px 4px color(primary, noir),
+        5: 5px 5px color(primary, noir),
+        6: 6px 6px color(primary, noir),
+        7: 7px 7px color(primary, noir),
+        8: 8px 8px color(primary, noir),
+        9: 9px 9px color(primary, noir),
+        10: 10px 10px color(primary, noir),
+    )
+);
+
+@function color($color, $value: 0) {
+    @return map-get(map-get($colors, $color), $value);
+}

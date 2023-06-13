@@ -1,0 +1,54 @@
+@use '../global' as *;
+
+.body-a-propos {
+    background-color: color(primary, violet);
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: rem(48);
+        padding-bottom: rem(48);
+
+        @media screen and (max-width: 980px) {
+            padding-top: 4vh;
+        }
+
+        .partie {
+            background-color: color(primary, blanc);
+            padding: rem(24) rem(40) rem(24) rem(40);
+            display: flex;
+            gap: rem(40);
+            border: solid 7px color(primary, noir);
+            border-radius: rem(24);
+            align-items: center;
+            box-shadow: rem(8) rem(8) color(primary, noir);
+
+            @media screen and (max-width: 980px) {
+                flex-direction: column;
+                gap: rem(24);
+            }
+
+            p {
+                font-size: rem(24);
+            }
+
+            img {
+                width: 30%;
+                height: fit-content;
+
+                @media screen and (max-width: 980px) {
+                    width: 60%;
+                }
+            }
+
+
+            &-2 {
+                flex-direction: row-reverse;
+
+                @media screen and (max-width: 980px) {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

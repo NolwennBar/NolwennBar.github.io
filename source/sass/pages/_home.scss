@@ -1,0 +1,204 @@
+// ---------------------------------------------------------
+// Pages
+// ---------------------------------------------------------
+
+@use '../global' as *;
+
+.main-accueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(100);
+    margin-bottom: rem(80);
+
+    @media screen and (max-width: 980px) {
+        gap: rem(10);
+    }
+
+    .background {
+        z-index: -1;
+        position: absolute;
+        top: 8%;
+        width: 75vw;
+        left: 20%;
+
+        @media screen and (max-width: 980px) {
+            display: none;
+        }
+
+    }
+
+    .background-responsive {
+        display: none;
+
+        @media screen and (max-width: 980px) {
+            display: block;
+            z-index: -1;
+            position: absolute;
+            top: 10%;
+            left: auto;
+        }
+    }
+
+    h2 {
+        color: color(primary, blanc);
+        font-size: rem(70);
+        font-weight: 500;
+
+        @media screen and (max-width: 980px) {
+            font-size: rem(30);
+        }
+
+        &.h2-principal {
+            text-transform: uppercase;
+            font-size: rem(80);
+
+            @media screen and (max-width: 980px) {
+                font-size: rem(30);
+                text-align: center;
+                line-height: rem(50);
+            }
+        }
+    }
+
+    .presentation {
+        height: 92vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+
+
+        .contenu {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            align-items: center;
+            justify-items: center;
+
+            @media screen and (max-width: 980px) {
+                display: flex;
+                flex-direction: column;
+                gap: rem(88);
+                justify-content: center;
+            }
+
+            img {
+                width: 70%;
+
+                @media screen and (max-width: 980px) {
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    .qui-suis-je {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: rem(30);
+
+        .background-qui-suis-je {
+            z-index: -1;
+            position: absolute;
+            top: 115vh;
+            width: 40vw;
+            left: 300px;
+
+            @media screen and (max-width: 980px) {
+                left: 0;
+                width: 80vh;
+                top: 105vh;
+            }
+        }
+
+        .titre {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(30);
+
+            img {
+                @media screen and (max-width: 980px) {
+                    height: rem(50);
+                }
+            }
+        }
+
+        .contenu {
+            display: grid;
+            grid-template-columns: 50% 30%;
+            align-items: center;
+            justify-items: center;
+            justify-content: space-between;
+
+            @media screen and (max-width: 980px) {
+                display: flex;
+                flex-direction: column;
+                gap: rem(64);
+            }
+
+            .description p {
+                font-size: rem(30);
+                color: color(primary, blanc);
+
+                @media screen and (max-width: 980px) {
+                    font-size: rem(20);
+                }
+            }
+
+            img {
+                @media screen and (max-width: 980px) {
+                    width: 70%;
+                }
+            }
+        }
+
+        .boutons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-evenly;
+            width: 75%;
+
+            @media screen and (max-width: 980px) {
+                font-size: rem(20);
+                width: 100%;
+            }
+
+            .CV {
+                background-color: color(primary, violet);
+
+                @media screen and (max-width: 980px) {
+                    font-size: rem(20);
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: color(primary, noir);
+                    transition: .2s ease-in-out;
+                }
+            }
+
+            .linkedin {
+                background-color: color(primary, jaune);
+                color: color(primary, noir);
+
+                &:hover,
+                &:focus {
+                    background-color: color(primary, noir);
+                    color: color(primary, blanc);
+                }
+
+                @media screen and (max-width: 980px) {
+                    font-size: rem(20);
+                }
+            }
+        }
+
+    }
+
+}

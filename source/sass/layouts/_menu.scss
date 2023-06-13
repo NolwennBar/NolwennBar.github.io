@@ -1,0 +1,56 @@
+@use '../global' as *;
+
+#menu {
+    background-color: color(primary, blanc);
+    display: flex;
+    align-items: center;
+    gap: rem(32);
+    padding: rem(16) rem(24) rem(16) rem(24);
+    border-radius: rem(50);
+    box-shadow: rem(4) rem(4) color(primary, noir);
+    border: color(primary, noir) solid rem(4);
+    width: fit-content;
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        gap: rem(16);
+        padding: rem(16) rem(8) rem(16) rem(8);
+        display: none;
+        transition: .3s all ease-in-out;
+        position: fixed;
+        border-radius: rem(20);
+
+        &.open {
+            display: flex;
+
+        }
+
+    }
+}
+
+#open-menu {
+    display: none;
+
+    @media screen and (max-width: 1200px) {
+        display: flex;
+        padding: rem(8);
+
+        &.open {
+            display: none;
+        }
+    }
+}
+
+#close-menu {
+    display: none;
+
+    @media screen and (max-width: 1200px) {
+        display: none;
+        padding: rem(8);
+
+        &.open {
+            display: flex;
+            background-color: color(primary, orange);
+        }
+    }
+}

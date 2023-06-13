@@ -1,0 +1,65 @@
+// ---------------------------------------------------------
+// Components - INPUTS
+// ---------------------------------------------------------
+
+@use '../global' as *;
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+
+    @media screen and (max-width: 980px) {
+        gap: rem(8);
+    }
+
+    label {
+        color: color(primary, noir);
+        font-size: rem(30);
+        background-color: color(primary, jaune);
+        border: rem(3) solid color(primary, noir);
+        box-shadow: rem(3) rem(3) color(primary, noir);
+        border-radius: rem(50);
+        padding: rem(8) rem(16) rem(8) rem(16);
+        width: fit-content;
+
+        @media screen and (max-width: 980px) {
+            font-size: rem(18);
+            padding: rem(8) rem(16) rem(8) rem(16);
+            width: fit-content;
+        }
+    }
+
+    input {
+        background-color: color(primary, blanc);
+        border: rem(3) solid color(primary, noir);
+        color: color(primary, noir);
+        font-size: rem(24);
+        border-radius: rem(50);
+        width: 35vw;
+        padding: rem(8) rem(16) rem(8) rem(16);
+        height: rem(56);
+
+        @media screen and (max-width: 980px) {
+            font-size: rem(18);
+            border-radius: rem(50);
+            width: 75vw;
+            height: rem(40);
+        }
+    }
+
+    textarea {
+        background-color: color(primary, blanc);
+        border: rem(3) solid color(primary, noir);
+        color: color(primary, noir);
+        font-size: rem(24);
+        border-radius: rem(35);
+        resize: none;
+        padding: rem(16);
+        height: rem(256);
+
+        @media screen and (max-width: 980px) {
+            height: rem(172);
+        }
+    }
+}
