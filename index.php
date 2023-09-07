@@ -19,7 +19,7 @@ include './layouts/header.php'; ?>
     <img class="background-qui-suis-je" src="./dist/assets/Backgrounds/Qui-suis-je.svg" alt="">
     <div class="titre">
         <h2>Qui suis-je ?</h2>
-        <img src="./dist/assets/sparkle.png" alt="">
+        <img src="./dist/assets/Sparkle.png" alt="">
     </div>
     <div class="contenu">
         <div class="description">

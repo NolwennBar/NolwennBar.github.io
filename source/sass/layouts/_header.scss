@@ -26,6 +26,7 @@
             border-radius: rem(50);
             font-weight: 500;
             width: fit-content;
+            animation: slideFromLeft 2s forwards;
 
             @media screen and (max-width: 1200px) {
                 font-size: rem(25);
@@ -33,6 +34,17 @@
             }
         }
     }
+
+    @keyframes slideFromLeft {
+        0% {
+            left: -100%;
+        }
+
+        100% {
+            left: 0;
+        }
+    }
+
 
     &.header-realisations {
         background-color: color(primary, orange);

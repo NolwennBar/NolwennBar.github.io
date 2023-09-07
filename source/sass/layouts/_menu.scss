@@ -10,6 +10,7 @@
     box-shadow: rem(4) rem(4) color(primary, noir);
     border: color(primary, noir) solid rem(4);
     width: fit-content;
+    animation: slideFromRight 2s forwards;
 
     @media screen and (max-width: 1200px) {
         flex-direction: column;
@@ -25,6 +26,16 @@
 
         }
 
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0;
     }
 }
 

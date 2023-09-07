@@ -24,7 +24,7 @@ include '../database/realisationsRepository.php' ?>
 
     $realisations = $realisationsRepo->findAll();
 
-    $path = RACINE . 'dist/assets/';
+    $path = RACINE . 'dist/assets/Réalisations/';
 
 
     foreach ($realisations as $realisation) {
@@ -33,13 +33,13 @@ include '../database/realisationsRepository.php' ?>
         onclick="afficherRealisation(<?= $realisation['id'] ?>)">
         <div class="barre">
             <p><?= $realisation['titre'] ?></p>
-            <img class="actions" src="<?= $path ?>Actions.svg" alt="">
+            <img class="actions" src="../dist/assets/Actions.svg" alt="">
         </div>
-        <img class="contenu" src="<?= $path . $realisation['image_1'] ?>" alt="">
+        <img class="contenu" src="<?= $path . $realisation['image_presentation'] ?>" alt="">
     </div>
     <?php
         } else if ($realisation['type'] == "mobile") { ?>
-    <div id="<?= $realisation['id'] ?>" class="telephone single-project maquette"
+    <div id="<?= $realisation['id'] ?>" class="div-telephone single-project maquette"
         onclick="afficherRealisation(<?= $realisation['id'] ?>)">
         <img class="telephone" src="<?= $path . $realisation['image_1'] ?>" alt="">
     </div>
@@ -49,7 +49,7 @@ include '../database/realisationsRepository.php' ?>
         class="single-project website ecran">
         <div class="barre">
             <p><?= $realisation['titre'] ?></p>
-            <img class="actions" src="<?= $path ?>Actions.svg" alt="">
+            <img class="actions" src="../dist/assets/Actions.svg" alt="">
         </div>
         <img class="contenu" src="<?= $path . $realisation['image_1'] ?>" alt="">
     </div><?php

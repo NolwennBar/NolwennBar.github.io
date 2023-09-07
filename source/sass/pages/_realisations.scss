@@ -76,6 +76,7 @@
         border-radius: rem(30);
         box-shadow: rem(8) rem(8) color(primary, noir);
         cursor: pointer;
+        max-width: rem(860);
 
         @media screen and (max-width: 980px) {
             width: 80vw;
@@ -130,18 +131,36 @@
         }
     }
 
-    .telephone {
-        min-height: 335px;
-        border-radius: rem(30);
-        border: solid rem(4) color(primary, noir);
+    .div-telephone {
+        border-radius: rem(29);
+        height: 33vw;
+        max-height: 53.75rem;
 
+        @media screen and (min-width: 1850px) {
+            height: 25vw;
+        }
 
         @media screen and (max-width: 980px) {
             width: auto;
             min-height: auto;
             max-height: rem(400);
             height: fit-content;
+        }
+
+        .telephone {
             border-radius: rem(30);
+            border: solid 0.5rem #000000;
+            box-shadow: 0.5rem 0.5rem #000000;
+            cursor: pointer;
+
+            height: 100%;
+
+            @media screen and (max-width: 980px) {
+
+                border-radius: rem(30);
+            }
         }
     }
+
+
 }
